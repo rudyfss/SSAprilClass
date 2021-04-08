@@ -1,7 +1,7 @@
 /**
  * In the package for the day 3 assignments
  */
-package com.ss.assignment.two;
+package com.ss.assignment.three;
 
 import java.util.Scanner;
 import java.io.File;
