@@ -11,12 +11,12 @@ package com.ss.assignment.four;
  */
 
 public class DoubleCheckedSingleton {
-	
-	private static DoubleCheckedSingleton oneAndOnlyInstance;
+	//NOTE: USE VOLATILE TO SYNCHRONIZE VARIABLES BUT ONLY FOR ONE INSTANCE AND NOT MULTIPLE INSTANCES
+	volatile private static DoubleCheckedSingleton oneAndOnlyInstance;
 	
 	public static DoubleCheckedSingleton getInstance() {
 		if (oneAndOnlyInstance == null ) {
-			synchronized (DoubleCheckedSingleton .class) {
+			synchronized (oneAndOnlyInstance) {
 				if (oneAndOnlyInstance == null ) {
 					oneAndOnlyInstance = new DoubleCheckedSingleton();
 				}
