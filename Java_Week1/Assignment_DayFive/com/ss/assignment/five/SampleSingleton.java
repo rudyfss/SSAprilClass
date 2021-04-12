@@ -20,7 +20,7 @@ public static class SampleSingleton {
 	private static SampleSingleton instance = null;
 	
 	public static SampleSingleton getInstance() {
-		
+		Samplesingleton();
 		return instance;
 	}
 	
